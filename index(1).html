@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio | Illustrator & Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#f43f5e', // A vibrant rose accent
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .dark { background-color: #0a0a0a; }
+        .gallery-item:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-[#fafafa] text-zinc-900 dark:bg-[#0a0a0a] dark:text-zinc-100 transition-colors duration-300 font-sans">
+
+    <nav class="fixed w-full z-50 bg-white/70 dark:bg-black/70 backdrop-blur-xl border-b border-zinc-200 dark:border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <span class="text-2xl font-black tracking-tighter font-display uppercase">Studio.</span>
+            
+            <div class="flex items-center gap-10">
+                <div class="hidden md:flex gap-8 font-medium text-sm uppercase tracking-widest">
+                    <a href="#work" class="hover:text-accent transition">Work</a>
+                    <a href="#about" class="hover:text-accent transition">About</a>
+                    <a href="#contact" class="hover:text-accent transition">Contact</a>
+                </div>
+                
+                <button id="theme-toggle" class="p-2 rounded-full bg-zinc-100 dark:bg-zinc-800 hover:ring-2 ring-accent transition-all">
+                    <i data-lucide="sun" class="hidden dark:block w-5 h-5 text-yellow-400"></i>
+                    <i data-lucide="moon" class="block dark:hidden w-5 h-5 text-zinc-600"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-48 pb-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-accent font-bold tracking-[0.2em] uppercase mb-4">Graphic Designer & Illustrator</p>
+            <h1 class="text-6xl md:text-8xl font-black font-display leading-[0.9] mb-8 tracking-tighter">
+                Visual stories <br/>told through <span class="italic font-light">pixels & ink.</span>
+            </h1>
+            <p class="text-xl text-zinc-500 dark:text-zinc-400 max-w-xl mb-12 leading-relaxed">
+                Specializing in brand identity, editorial illustration, and character design for digital platforms.
+            </p>
+            <a href="#work" class="inline-flex items-center gap-2 group text-lg font-bold">
+                See Featured Work 
+                <i data-lucide="arrow-right" class="group-hover:translate-x-2 transition-transform"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="work" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="gallery-item relative overflow-hidden rounded-3xl bg-zinc-200 dark:bg-zinc-800 md:col-span-2 aspect-[16/10]">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=1200" alt="Illustration" class="w-full h-full object-cover transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-10">
+                        <span class="text-accent font-bold uppercase text-xs mb-2">Editorial Illustration</span>
+                        <h3 class="text-white text-3xl font-bold">Nature's Whisper</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative overflow-hidden rounded-3xl bg-zinc-200 dark:bg-zinc-800 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800" alt="Branding" class="w-full h-full object-cover transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <span class="text-accent font-bold uppercase text-xs mb-2">Identity</span>
+                        <h3 class="text-white text-2xl font-bold">Arcane Brand</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative overflow-hidden rounded-3xl bg-zinc-200 dark:bg-zinc-800 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800" alt="3D Art" class="w-full h-full object-cover transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <span class="text-accent font-bold uppercase text-xs mb-2">3D Abstract</span>
+                        <h3 class="text-white text-2xl font-bold">Fluid Motion</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative overflow-hidden rounded-3xl bg-zinc-200 dark:bg-zinc-800 aspect-[4/5]">
+                    <img src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=800" alt="Poster Design" class="w-full h-full object-cover transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <span class="text-accent font-bold uppercase text-xs mb-2">Typography</span>
+                        <h3 class="text-white text-2xl font-bold">Modern Bauhaus</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item relative overflow-hidden rounded-3xl bg-zinc-200 dark:bg-zinc-800 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800" alt="Logofolio" class="w-full h-full object-cover transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                        <span class="text-accent font-bold uppercase text-xs mb-2">Design</span>
+                        <h3 class="text-white text-2xl font-bold">2026 Logofolio</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-32 px-6 bg-zinc-100 dark:bg-zinc-900 mt-20">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-5xl font-black font-display mb-6 tracking-tighter italic">Let's create something <span class="text-accent italic">beautiful.</span></h2>
+                <p class="text-xl text-zinc-500 dark:text-zinc-400 mb-8">Open for commissions, mural work, and creative direction.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="p-4 rounded-full bg-white dark:bg-zinc-800 hover:text-accent transition"><i data-lucide="instagram"></i></a>
+                    <a href="#" class="p-4 rounded-full bg-white dark:bg-zinc-800 hover:text-accent transition"><i data-lucide="dribbble"></i></a>
+                    <a href="#" class="p-4 rounded-full bg-white dark:bg-zinc-800 hover:text-accent transition"><i data-lucide="framer"></i></a>
+                </div>
+            </div>
+            <div class="text-left md:text-right">
+                <a href="mailto:create@studio.com" class="text-4xl md:text-6xl font-display font-bold hover:text-accent transition break-all">
+                    create@studio.com
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Dark Mode Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+    </script>
+</body>
+</html>
